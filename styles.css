@@ -93,40 +93,44 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0 0 .4em; let
 
 /* --- Mobile Responsiveness & Scroll Behaviour --- */
 @media (max-width: 768px) {
-  /* Επιτρέπουμε στα στοιχεία του header να αναδιπλώνονται σε κινητά */
   .site-header .wrap {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     height: auto;
-    padding: 8px 16px;
+    padding: 10px 16px;
+    gap: 8px;
   }
 
-  nav.main-nav {
+  .site-header nav.main-nav {
     width: 100%;
-    display: flex;
-    justify-content: center;
   }
 
   nav.main-nav ul {
-    gap: 12px;
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 4px 0;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
   
   nav.main-nav a {
     font-size: 0.8rem;
-    padding: 4px 0;
+    padding: 2px 4px;
     white-space: nowrap;
   }
 
-  /* Στο scroll: κρύβεται το μενού αλλά μένει σταθερό το λογότυπο ψηλά */
+  /* Απόκρυψη μενού στο scroll στα κινητά και επανφορά σε γραμμή για το λογότυπο */
   .site-header.is-scrolled .wrap {
+    flex-direction: row;
+    justify-content: space-between;
     height: 50px;
     min-height: 50px;
-    flex-wrap: nowrap;
     padding: 0 16px;
+    gap: 0;
   }
-
+  
   .site-header.is-scrolled .main-nav {
     display: none !important;
   }
