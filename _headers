@@ -1,5 +1,5 @@
 /*.html
   Cache-Control: no-cache, no-store, must-revalidate
 
-/styles.css
+/*.css
   Cache-Control: no-cache, no-store, must-revalidate

@@ -76,21 +76,13 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0 0 .4em; let
 
 .brand-name {
   font-family: var(--font-display);
+  font-size: 1.15rem;
   font-weight: 600;
-  display: flex;
-  flex-direction: row;     /* Τα βάζει δίπλα-δίπλα στην ίδια γραμμή */
-  align-items: center;     /* Κέντραρε τα οπτικά μεταξύ τους */
-  gap: 8px;                /* Απόσταση μεταξύ "ΑΓΡΟΚΤΗΜΑ" και "Καμαράκι" */
-  font-size: 1.15rem;      /* Συνολικό μέγεθος γραμματοσειράς */
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
 }
 
-.brand-name em {
-  font-style: normal;
-  color: var(--olive);
-  font-size: 0.65rem;      /* Μικρότερο μέγεθος για το "ΑΓΡΟΚΤΗΜΑ" ώστε να ταιριάζει */
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
 
 /* Desktop Navigation (Οριζόντιο, χωρίς κουκκίδες) */
 .site-header nav.main-nav ul {
