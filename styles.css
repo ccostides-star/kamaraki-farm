@@ -60,18 +60,17 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0 0 .4em; let
 }
 
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   text-decoration: none;
-  color: var(--ink);
-  flex: none;
 }
 
 .brand svg {
   width: 32px;
   height: 32px;
-  flex: none;
+  flex-shrink: 0;
+  display: block;
 }
 
 .brand-name {
@@ -79,15 +78,13 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0 0 .4em; let
   font-size: 1.15rem;
   font-weight: 600;
   white-space: nowrap;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35em; /* Αποστάτη ανάμεσα στις λέξεις */
-  transform: translateY(-1.5px); /* Τέλεια οπτική ευθυγράμμιση με το εικονίδιο */
-  color: var(--ink); /* Το "Καμαράκι" μένει στο χρώμα μελανιού */
+  line-height: 1;
+  display: inline-block;
+  color: var(--ink); /* Το "Καμαράκι" σκούρο */
 }
 
 .brand-name .brand-green {
-  color: var(--olive); /* Το "Αγρόκτημα" στο πράσινο της ελιάς */
+  color: var(--olive); /* Το "Αγρόκτημα" πράσινο της ελιάς */
 }
 
 /* Desktop Navigation (Οριζόντιο, χωρίς κουκκίδες) */
