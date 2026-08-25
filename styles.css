@@ -92,69 +92,68 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0 0 .4em; let
 }
 
 /* --- Mobile Responsiveness & Scroll Behaviour --- */
+/* --- Οριστική Διόρθωση Header για Κινητά --- */
 @media (max-width: 768px) {
+  /* Αρχική κατάσταση: Το header γίνεται κάθετο (λογότυπο επάνω, μενού κάτω) */
+  header.site-header .wrap,
   .site-header .wrap {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 10px 16px;
-    gap: 8px;
+    flex-direction: column !important;
+    align-items: center !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 10px 16px !important;
+    gap: 8px !important;
   }
 
+  /* Το μενού καταλαμβάνει όλο το πλάτος και κεντραρίρεται */
   .site-header nav.main-nav {
-    width: 100%;
+    width: 100% !important;
+    display: block !important;
   }
 
-  nav.main-nav ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  .site-header nav.main-nav ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px 12px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
   }
   
-  nav.main-nav a {
-    font-size: 0.8rem;
-    padding: 2px 4px;
-    white-space: nowrap;
+  .site-header nav.main-nav a {
+    font-size: 0.75rem !important;
+    padding: 2px 4px !important;
+    white-space: nowrap !important;
   }
 
-  /* Απόκρυψη μενού στο scroll στα κινητά και επανφορά σε γραμμή για το λογότυπο */
+  /* Κατάσταση Scroll: Σταθερό header ψηλά με το λογότυπο ορατό και απόκρυψη του μενού */
+  .site-header.is-scrolled {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+  }
+
   .site-header.is-scrolled .wrap {
-    flex-direction: row;
-    justify-content: space-between;
-    height: 50px;
-    min-height: 50px;
-    padding: 0 16px;
-    gap: 0;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 50px !important;
+    min-height: 50px !important;
+    padding: 0 16px !important;
+    gap: 0 !important;
   }
-  
+
   .site-header.is-scrolled .main-nav {
     display: none !important;
   }
 
   .site-header.is-scrolled .brand {
-    cursor: pointer;
+    cursor: pointer !important;
   }
 }
-
-/* --- Footer Brand (1 γραμμή) --- */
-footer.site-footer .brand-name {
-  display: flex;
-  flex-direction: row;
-  gap: 6px;
-  align-items: center;
-  font-size: 1rem;
-}
-
-footer.site-footer .brand-name em {
-  font-size: inherit;
-  letter-spacing: normal;
-  text-transform: none;
-}
-
 /* ---------- hero ---------- */
 .hero{ padding:64px 0 40px; }
 .hero .wrap{ display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center; }
