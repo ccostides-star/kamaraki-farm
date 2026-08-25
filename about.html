@@ -104,9 +104,11 @@
     // Παρακολούθηση κύλισης (scroll) στα κινητά
     window.addEventListener('scroll', () => {
       if (window.innerWidth <= 768) {
-        if (window.scrollY > 30) {
+        const currentScroll = window.scrollY;
+        
+        if (currentScroll > 100) {
           header.classList.add('is-scrolled');
-        } else {
+        } else if (currentScroll < 30) {
           header.classList.remove('is-scrolled');
         }
       }

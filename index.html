@@ -148,12 +148,12 @@
       if (window.innerWidth <= 768) {
         const currentScroll = window.scrollY;
         
-        // Κλείνει όταν κατεβείς πάνω από 50px
-        if (currentScroll > 50) {
+        // Κλείνει όταν κατεβείς πάνω από 100px
+        if (currentScroll > 100) {
           header.classList.add('is-scrolled');
         } 
-        // Ξανανοίγει μόνο όταν πλησιάσεις την κορυφή (κάτω από 10px)
-        else if (currentScroll < 10) {
+        // Ξανανοίγει μόνο όταν πλησιάσεις την κορυφή (κάτω από 30px)
+        else if (currentScroll < 30) {
           header.classList.remove('is-scrolled');
         }
       }
