@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kamaraki Farm — Fresh produce from our farm in Evia</title>
+<meta name="description" content="Family farm of 7 acres in Mentouli, Kymi, Evia. Fresh vegetables, spoon sweets, jams and chutney, straight from the farm.">
+<meta property="og:title" content="Kamaraki Farm">
+<meta property="og:description" content="Fresh vegetables, spoon sweets, jams and chutney from our farm in Mentouli, Kymi, Evia.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index-en.html">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#545F3B"/><path d="M10 46 C10 30 20 20 32 20 C44 20 54 30 54 46" fill="none" stroke="#F8F3E7" stroke-width="5" stroke-linecap="round"/><rect x="8" y="46" width="48" height="6" rx="2" fill="#F8F3E7"/></svg>
+      <span class="brand-name">Kamaraki<span class="brand-green">, a Family Farm</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main menu">
+      <ul>
+        <li><a href="index-en.html" aria-current="page">Home</a></li>
+        <li><a href="products-en.html">Products</a></li>
+        <li><a href="about-en.html">About Us</a></li>
+        <li><a href="visit-en.html">Visit Us</a></li>
+      </ul>
+    </nav>
+    <div class="lang-switch">
+      <a href="index.html">EL</a>
+      <span>EN</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Mentouli · Kymi · Evia</span>
+        <h1>Whatever the earth gives us, reaches your table.</h1>
+        <p class="lede">Family farm of 7 acres, among the olive trees and fruit trees of Mentouli. Fresh vegetables, spoon sweets, jams and chutney — made on the farm, with whatever each season brings.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="products-en.html">See what's fresh today</a>
+          <a class="btn btn-ghost" href="visit-en.html">How to find us</a>
+        </div>
+      </div>
+
+      <div class="harvest-board" aria-label="Today's harvest">
+        <div class="board-head">
+          <h2>Today's Harvest</h2>
+          <span class="board-date">updated regularly</span>
+        </div>
+        <ul>
+          <li><span>Tomatoes</span><span class="tag">FRESH</span></li>
+          <li><span>Courgettes</span><span class="tag">FRESH</span></li>
+          <li><span>Apricot spoon sweet</span><span class="tag">IN STOCK</span></li>
+          <li><span>Fig jam</span><span class="tag">IN STOCK</span></li>
+          <li><span>Tomato chutney</span><span class="tag">LIMITED</span></li>
+        </ul>
+        <p class="note">* Indicative list — replace with whatever you have available each week.</p>
+      </div>
+    </div>
+  </section>
+
+<section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">From the farm to your hand</span>
+        <h2>Three categories, one identity.</h2>
+        <p>Whatever isn't eaten fresh becomes sweet, jam, chutney or traditional preserve — so the taste of the season lasts all year.</p>
+      </div>
+      <div class="cat-grid">
+
+        <div class="cat-card">
+          <div class="ph wide" data-label="PHOTO: Vegetable garden / basket of vegetables"></div>
+          <div class="cat-body">
+            <span class="eyebrow">01 — Seasonal</span>
+            <h3>Fruit & Vegetables</h3>
+            <p>Whatever is ready in our garden this week, picked in the morning — without out-of-season pesticides.</p>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="ph wide" data-label="PHOTO: Jars of spoon sweet / jam"></div>
+          <div class="cat-body">
+            <span class="eyebrow">02 — Traditional Sweet Delicacies</span>
+            <h3>Spoon Sweets, Jams &amp; Chutney</h3>
+            <p>Traditional recipes, boiled in small batches, with fruits and vegetables from our own trees and gardens.</p>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="ph wide" data-label="PHOTO: Grocery / olive oil and traditional items"></div>
+          <div class="cat-body">
+            <span class="eyebrow">03 — Specialty Groceries</span>
+            <h3>Various Preparations</h3>
+            <p>Olive oil from our estate, roasted Florina peppers, olives and dried hot peppers.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <small>© 2026 Kamaraki Farm, Mentouli Kymis, Evia</small>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.site-header');
+    const brandLink = header ? header.querySelector('.brand') : null;
+
+    if (!header || !brandLink) return;
+
+    window.addEventListener('scroll', () => {
+      if (window.innerWidth > 768) return;
+
+      const eyebrow = document.querySelector('.hero .eyebrow');
+      if (eyebrow) {
+        const headerBottom = header.getBoundingClientRect().bottom;
+        const eyebrowTop = eyebrow.getBoundingClientRect().top;
+
+        if (eyebrowTop <= headerBottom) {
+          header.classList.add('is-scrolled');
+        } else if (window.scrollY < 30) {
+          header.classList.remove('is-scrolled');
+        }
+      }
+    });
+
+    brandLink.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768 && header.classList.contains('is-scrolled')) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

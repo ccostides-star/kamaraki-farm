@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — Kamaraki Farm</title>
+<meta name="description" content="Available now: fresh fruit & vegetables, spoon sweets, jams and chutney from Kamaraki Farm in Mentouli, Kymi, Evia.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index-en.html">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#545F3B"/><path d="M10 46 C10 30 20 20 32 20 C44 20 54 30 54 46" fill="none" stroke="#F8F3E7" stroke-width="5" stroke-linecap="round"/><rect x="8" y="46" width="48" height="6" rx="2" fill="#F8F3E7"/></svg>
+      <span class="brand-name">Kamaraki<span class="brand-green">, a Family Farm</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main menu">
+      <ul>
+        <li><a href="index-en.html">Home</a></li>
+        <li><a href="products-en.html" aria-current="page">Products</a></li>
+        <li><a href="about-en.html">About Us</a></li>
+        <li><a href="visit-en.html">Visit Us</a></li>
+      </ul>
+    </nav>
+    <div class="lang-switch">
+      <a href="products.html">EL</a>
+      <span>EN</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:12px;">
+    <div class="wrap" style="grid-template-columns:1fr;">
+      <div>
+        <span class="eyebrow">Available Now</span>
+        <h1 style="font-size:clamp(2rem,4vw,2.8rem);">The farm's products</h1>
+        <p class="lede">The list updates as the harvest changes. Prices below are indicative — replace them with your own.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:12px;">
+    <div class="wrap">
+      <div class="cat-grid">
+
+        <div class="cat-card">
+          <div class="ph wide" data-label="PHOTO: Seasonal fruit & vegetables"></div>
+          <div class="cat-body">
+            <span class="eyebrow">Fruit & Vegetables</span>
+            <h3>Vegetables &amp; Seasonal Fruit</h3>
+            <ul class="product-list">
+              <li><span class="pname">Tomatoes<span class="pnote">per kg</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Tomatoes (per kg)')">Availability</button></li>
+              <li><span class="pname">Prune noire black tomato<span class="pnote">per kg</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Prune noire black tomato (per kg)')">Availability</button></li>
+              <li><span class="pname">Peardrops orange cherry tomato<span class="pnote">per kg</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Peardrops orange cherry tomato (per kg)')">Availability</button></li>
+              <li><span class="pname">Yolo Wonder pepper<span class="pnote">per kg</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Yolo Wonder pepper (per kg)')">Availability</button></li>
+              <li><span class="pname">Florina pepper<span class="pnote">per kg</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Florina pepper (per kg)')">Availability</button></li>
+              <li><span class="pname">Flask eggplant<span class="pnote">per kg</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Flask eggplant (per kg)')">Availability</button></li>
+              <li><span class="pname">Long Purple eggplant<span class="pnote">per kg</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Long Purple eggplant (per kg)')">Availability</button></li>
+              <li><span class="pname">Potatoes<span class="pnote">per kg</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Potatoes (per kg)')">Availability</button></li>
+            </ul>
+            <div class="badge-row"><span class="badge">Seasonal</span><span class="badge">100% traditional varieties</span><span class="badge">Picked to order</span></div>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="ph wide" data-label="PHOTO: Spoon sweets in jars"></div>
+          <div class="cat-body">
+            <span class="eyebrow">Traditional Sweet Delicacies</span>
+            <h3>Spoon Sweets</h3>
+            <ul class="product-list">
+              <li><span class="pname">Black grape<span class="pnote">500g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Black grape')">Availability</button></li>
+              <li><span class="pname">White grape<span class="pnote">500g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('White grape')">Availability</button></li>
+              <li><span class="pname">Strawberry<span class="pnote">500g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Strawberry')">Availability</button></li>
+              <li><span class="pname">Cherry<span class="pnote">500g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Cherry')">Availability</button></li>
+              <li><span class="pname">Sour cherry<span class="pnote">500g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Sour cherry')">Availability</button></li>
+              <li><span class="pname">Lemon frape<span class="pnote">500g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Lemon frape')">Availability</button></li>
+              <li><span class="pname">Orange<span class="pnote">500g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Orange')">Availability</button></li>
+              <li><span class="pname">Watermelon<span class="pnote">500g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Watermelon')">Availability</button></li>
+            </ul>
+            <div class="badge-row"><span class="badge">Handmade</span><span class="badge">Limited production</span></div>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="ph wide" data-label="PHOTO: Jams"></div>
+          <div class="cat-body">
+            <span class="eyebrow">Traditional Sweet Delicacies</span>
+            <h3>Jams</h3>
+            <ul class="product-list">
+              <li><span class="pname">Kymi fig<span class="pnote">500g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Kymi fig')">Availability</button></li>
+              <li><span class="pname">Orange<span class="pnote">500g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Orange jam')">Availability</button></li>
+              <li><span class="pname">Apricot<span class="pnote">500g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Apricot')">Availability</button></li>
+              <li><span class="pname">Peach<span class="pnote">500g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Peach')">Availability</button></li>
+              <li><span class="pname">Apple &amp; Pear<span class="pnote">500g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Apple & Pear')">Availability</button></li>
+            </ul>
+            <div class="badge-row"><span class="badge">No preservatives</span><span class="badge">Limited production</span></div>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="ph wide" data-label="PHOTO: Chutney"></div>
+          <div class="cat-body">
+            <span class="eyebrow">Traditional Sweet Delicacies</span>
+            <h3>Chutney</h3>
+            <ul class="product-list">
+              <li><span class="pname">Orange &amp; red cherry tomatoes<span class="pnote">250g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Orange & red cherry tomatoes (chutney)')">Availability</button></li>
+              <li><span class="pname">Onion<span class="pnote">250g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Onion (chutney)')">Availability</button></li>
+              <li><span class="pname">Fig<span class="pnote">250g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Fig (chutney)')">Availability</button></li>
+              <li><span class="pname">Jalapeno pepper<span class="pnote">250g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Jalapeno pepper (chutney)')">Availability</button></li>
+              <li><span class="pname">Olive<span class="pnote">250g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Olive (chutney)')">Availability</button></li>
+            </ul>
+            <div class="badge-row"><span class="badge">Ideal with cheeses &amp; cold cuts</span><span class="badge">Limited production</span></div>
+          </div>
+        </div>
+
+          <div class="cat-card">
+          <div class="ph wide" data-label="PHOTO: Grocery"></div>
+          <div class="cat-body">
+            <span class="eyebrow">Specialty Groceries</span>
+            <h3>Various Preparations</h3>
+            <ul class="product-list">
+              <li><span class="pname">Olive oil, local traditional variety<span class="pnote">1 Litre</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Olive oil (litre)')">Availability</button></li>
+              <li><span class="pname">Olive oil with hot Cayenne pepper<span class="pnote">200mL jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Olive oil with hot Cayenne pepper (jar)')">Availability</button></li>
+              <li><span class="pname">Roasted Florina peppers in olive oil &amp; vinegar<span class="pnote">1 kg jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Roasted Florina peppers (jar)')">Availability</button></li>
+              <li><span class="pname">Throumba olives in oil<span class="pnote">500g jar</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Throumba olives in oil (jar)')">Availability</button></li>
+              <li><span class="pname">Dried hot Trinidad Moruga Scorpion peppers<span class="pnote">piece</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Dried hot Trinidad Moruga Scorpion peppers (pc)')">Availability</button></li>
+              <li><span class="pname">Dried hot Naga Morich peppers<span class="pnote">piece</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Dried hot Naga Morich peppers (pc)')">Availability</button></li>
+              <li><span class="pname">Dried hot Habanero peppers<span class="pnote">piece</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Dried hot Habanero peppers (pc)')">Availability</button></li>
+              <li><span class="pname">Dried hot Cayenne peppers<span class="pnote">piece</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Dried hot Cayenne peppers (pc)')">Availability</button></li>
+            </ul>
+            <div class="badge-row"><span class="badge">Limited production</span><span class="badge">Made with pure ingredients and raw materials straight from the farm</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <p style="margin-top:32px; color:var(--ink-soft); font-size:.92rem;">
+        Want a larger quantity or a restaurant order? <a href="visit-en.html" style="text-decoration:underline;">Contact us</a>.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <small>© 2026 Kamaraki Farm, Mentouli Kymis, Evia</small>
+  </div>
+</footer>
+
+<!-- Modal Popup -->
+<dialog id="availabilityModal" class="availability-modal">
+  <form method="dialog" style="position:relative;" id="availabilityForm">
+    <button type="button" class="modal-close" onclick="closeModal()">✕</button>
+
+    <input type="hidden" name="access_key" value="6e248eff-0a82-4f13-a08e-a9cc30222505">
+    <input type="hidden" name="subject" id="emailSubject" value="New product availability request">
+
+    <div id="formContent">
+      <span class="eyebrow">Contact Form</span>
+      <h3 id="modalProductTitle" style="margin-top:4px; font-size:1.3rem;">Product availability</h3>
+      <p style="font-size:0.9rem; color:var(--ink-soft); margin-bottom:20px;">Fill in your mobile number and choose how you'd like us to reply.</p>
+
+      <input type="hidden" id="hiddenProductName" name="product">
+
+      <div class="modal-form-group">
+        <label for="phone">Mobile Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="e.g. 69XXXXXXXX" required>
+      </div>
+
+      <div class="modal-form-group">
+        <label>Contact method</label>
+        <div class="radio-group">
+          <label><input type="radio" name="contact_method" value="Viber" checked> Viber</label>
+          <label><input type="radio" name="contact_method" value="WhatsApp"> WhatsApp</label>
+          <label><input type="radio" name="contact_method" value="SMS"> Text SMS</label>
+        </div>
+      </div>
+
+      <div style="margin-top:24px; display:flex; justify-content:flex-end; gap:10px;">
+        <button type="button" class="btn btn-ghost" style="padding:10px 16px;" onclick="closeModal()">Cancel</button>
+        <button type="button" class="btn btn-primary" style="padding:10px 20px;" onclick="submitInquiry()">Send request</button>
+      </div>
+    </div>
+
+    <div id="successContent" style="display:none; text-align:center; padding: 10px 0 20px;">
+      <span class="eyebrow" style="color: var(--olive);">Success</span>
+      <h3 style="margin-top:8px; font-size:1.3rem;">Your request has been recorded!</h3>
+      <p id="successMessageText" style="font-size:0.95rem; color:var(--ink-soft); margin: 16px 0 28px; line-height: 1.5;"></p>
+      <button type="button" class="btn btn-primary" style="padding:10px 24px; width:100%;" onclick="closeModal()">Close</button>
+    </div>
+
+  </form>
+</dialog>
+
+<script>
+  const modal = document.getElementById('availabilityModal');
+  const titleEl = document.getElementById('modalProductTitle');
+  const hiddenInput = document.getElementById('hiddenProductName');
+  const formContent = document.getElementById('formContent');
+  const successContent = document.getElementById('successContent');
+  const successMessageText = document.getElementById('successMessageText');
+
+  function openAvailabilityModal(productName) {
+    titleEl.textContent = productName;
+    hiddenInput.value = productName;
+
+    formContent.style.display = 'block';
+    successContent.style.display = 'none';
+    document.getElementById('phone').value = '';
+
+    modal.showModal();
+  }
+
+  function closeModal() {
+    modal.close();
+  }
+
+  function submitInquiry() {
+    const phone = document.getElementById('phone').value;
+    const method = document.querySelector('input[name="contact_method"]:checked').value;
+    const product = hiddenInput.value;
+
+    if(!phone || phone.length < 6) {
+      alert('Please enter a valid mobile number.');
+      return;
+    }
+
+    const formElement = document.getElementById('availabilityForm');
+    const formData = new FormData(formElement);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const submitBtn = event.target;
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: json
+    })
+    .then(async (response) => {
+      let resJson = await response.json();
+      if (response.status == 200) {
+        successMessageText.innerHTML = `We will contact you about<br><strong style="color:var(--ink);">${product}</strong><br>via <strong>${method}</strong> at <strong>${phone}</strong>.`;
+
+        formContent.style.display = 'none';
+        successContent.style.display = 'block';
+      } else {
+        alert(resJson.message || 'Something went wrong. Please try again.');
+      }
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    })
+    .catch(error => {
+      console.log(error);
+      alert('Connection error. Please check your internet.');
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    });
+  }
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('.site-header');
+      const brandLink = header ? header.querySelector('.brand') : null;
+
+      if (!header || !brandLink) return;
+
+      window.addEventListener('scroll', () => {
+        if (window.innerWidth > 768) return;
+
+        const eyebrow = document.querySelector('.hero .eyebrow');
+        if (eyebrow) {
+          const headerBottom = header.getBoundingClientRect().bottom;
+          const eyebrowTop = eyebrow.getBoundingClientRect().top;
+
+          if (eyebrowTop <= headerBottom) {
+            header.classList.add('is-scrolled');
+          } else if (window.scrollY < 30) {
+            header.classList.remove('is-scrolled');
+          }
+        }
+      });
+
+      brandLink.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && header.classList.contains('is-scrolled')) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

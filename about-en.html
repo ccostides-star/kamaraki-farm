@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Kamaraki Farm</title>
+<meta name="description" content="The story behind Kamaraki Farm, a family farm of 7 acres in Mentouli, Kymi, Evia.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index-en.html">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#545F3B"/><path d="M10 46 C10 30 20 20 32 20 C44 20 54 30 54 46" fill="none" stroke="#F8F3E7" stroke-width="5" stroke-linecap="round"/><rect x="8" y="46" width="48" height="6" rx="2" fill="#F8F3E7"/></svg>
+      <span class="brand-name">Kamaraki<span class="brand-green">, a Family Farm</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main menu">
+      <ul>
+        <li><a href="index-en.html">Home</a></li>
+        <li><a href="products-en.html">Products</a></li>
+        <li><a href="about-en.html" aria-current="page">About Us</a></li>
+        <li><a href="visit-en.html">Visit Us</a></li>
+      </ul>
+    </nav>
+    <div class="lang-switch">
+      <a href="about.html">EL</a>
+      <span>EN</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:24px;">
+    <div class="story-grid wrap">
+      <div>
+        <span class="eyebrow">Our Story</span>
+        <h1 style="font-size:clamp(2rem,4vw,2.8rem);">The name comes from a bridge.</h1>
+        <p class="lede">"Kamaraki" got its name from an old stone arched bridge in the area — a small arch that connected roads and people in Mentouli, Kymi. That's what our farm does today: it connects the land to the table.</p>
+        <div class="stat-row">
+          <div class="stat"><div class="num">7</div><div class="label">Acres</div></div>
+          <div class="stat"><div class="num">[X]</div><div class="label">Years of cultivation</div></div>
+          <div class="stat"><div class="num">4+</div><div class="label">Product categories</div></div>
+        </div>
+      </div>
+      <div class="ph" data-label="PHOTO: The stone Kamaraki bridge or farm landscape"></div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="story-grid reverse wrap">
+      <div class="ph square" data-label="PHOTO: Olive trees / fruit trees of the farm"></div>
+      <div>
+        <span class="eyebrow">The Land</span>
+        <h2>Olive trees, fruit trees and a garden on the slope.</h2>
+        <p>On the 7 acres of Mentouli we cultivate olive trees, fruit trees and a vegetable garden on sloping terrain, along with potatoes. The soil here is limestone, alkaline — we work with it, not against it, choosing varieties and methods that suit the conditions of Evia.</p>
+        <p>[Add your personal story here: how the farm started, who takes care of it, what made you fall in love with this land.]</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How We Work</span>
+        <h2>From harvest to jar.</h2>
+        <p>[Describe your philosophy briefly: seasonality, small batches, traditional recipes, local ingredients, etc.]</p>
+      </div>
+      <div class="cat-grid">
+        <div class="cat-card">
+          <div class="cat-body">
+            <span class="eyebrow">Seasonality</span>
+            <h3>Only what is ready</h3>
+            <p>We pick whatever is ripening on the farm at any moment — nothing comes from elsewhere.</p>
+          </div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-body">
+            <span class="eyebrow">Tradition</span>
+            <h3>Recipes passed down the family</h3>
+            <p>Our spoon sweets and jams follow recipes that have been tested for years.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <small>© 2026 Kamaraki Farm, Mentouli Kymis, Evia</small>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.site-header');
+    const brandLink = header ? header.querySelector('.brand') : null;
+
+    if (!header || !brandLink) return;
+
+    window.addEventListener('scroll', () => {
+      if (window.innerWidth > 768) return;
+
+      const eyebrow = document.querySelector('.hero .eyebrow');
+      if (eyebrow) {
+        const headerBottom = header.getBoundingClientRect().bottom;
+        const eyebrowTop = eyebrow.getBoundingClientRect().top;
+
+        if (eyebrowTop <= headerBottom) {
+          header.classList.add('is-scrolled');
+        } else if (window.scrollY < 30) {
+          header.classList.remove('is-scrolled');
+        }
+      }
+    });
+
+    brandLink.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768 && header.classList.contains('is-scrolled')) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
