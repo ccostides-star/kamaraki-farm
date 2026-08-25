@@ -103,12 +103,16 @@
 
     // Παρακολούθηση κύλισης (scroll) στα κινητά
     window.addEventListener('scroll', () => {
-      if (window.innerWidth <= 768) {
-        const currentScroll = window.scrollY;
+      if (window.innerWidth > 768) return;
+      
+      const eyebrow = document.querySelector('.hero .eyebrow');
+      if (eyebrow) {
+        const headerBottom = header.getBoundingClientRect().bottom;
+        const eyebrowTop = eyebrow.getBoundingClientRect().top;
         
-        if (currentScroll > 100) {
+        if (eyebrowTop <= headerBottom) {
           header.classList.add('is-scrolled');
-        } else if (currentScroll < 30) {
+        } else if (window.scrollY < 30) {
           header.classList.remove('is-scrolled');
         }
       }
