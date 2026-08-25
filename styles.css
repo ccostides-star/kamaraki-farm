@@ -42,30 +42,80 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0 0 .4em; let
   text-transform:uppercase; color:var(--olive-dark);
 }
 
-/* ---------- header / nav ---------- */
-.site-header{
-  position:sticky; top:0; z-index:50;
-  background:rgba(237,230,214,.92); backdrop-filter:blur(6px);
-  border-bottom:1px solid var(--line);
+/* --- Header & Logo Styles --- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bg);
+  transition: all 0.3s ease;
 }
-.site-header .wrap{
-  display:flex; align-items:center; justify-content:space-between;
-  height:72px;
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 16px;
 }
-.brand{ display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); }
-.brand svg{ width:34px; height:34px; flex:none; }
-.brand-name{ font-family:var(--font-display); font-size:1.25rem; font-weight:600; }
-.brand-name em{ font-style:normal; color:var(--olive); }
-nav.main-nav ul{ list-style:none; display:flex; gap:28px; margin:0; padding:0; }
-nav.main-nav a{
-  text-decoration:none; font-size:.95rem; font-weight:500;
-  padding:6px 2px; border-bottom:2px solid transparent;
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--ink);
+  flex: none;
 }
-nav.main-nav a:hover, nav.main-nav a[aria-current="page"]{ border-color:var(--apricot); }
-.nav-toggle{ display:none; }
-@media (max-width:720px){
-  nav.main-nav ul{ gap:16px; }
-  nav.main-nav a{ font-size:.85rem; }
+
+.brand svg {
+  width: 32px;
+  height: 32px;
+  flex: none;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name em {
+  font-style: normal;
+  color: var(--olive);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* --- Mobile Responsiveness & Scroll Behaviour --- */
+@media (max-width: 768px) {
+  nav.main-nav ul {
+    gap: 10px;
+  }
+  
+  nav.main-nav a {
+    font-size: 0.8rem;
+    padding: 4px 0;
+    white-space: nowrap;
+  }
+
+  /* Απόκρυψη μενού στο scroll στα κινητά */
+  .site-header.is-scrolled .main-nav {
+    display: none !important;
+  }
+  
+  .site-header.is-scrolled .wrap {
+    height: 50px;
+    min-height: 50px;
+  }
+
+  .site-header.is-scrolled .brand {
+    cursor: pointer;
+  }
 }
 
 /* ---------- hero ---------- */
