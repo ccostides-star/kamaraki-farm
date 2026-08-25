@@ -389,3 +389,43 @@ dialog.availability-modal::backdrop {
 .price-btn:hover {
   color: var(--apricot);
 }
+
+/* ---------- language switcher ---------- */
+.lang-switch {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+
+.lang-switch a,
+.lang-switch span {
+  text-decoration: none;
+  padding: 3px 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  display: inline-block;
+}
+
+.lang-switch a {
+  color: var(--ink-soft);
+}
+
+.lang-switch a:hover {
+  color: var(--olive);
+  border-color: var(--olive);
+}
+
+.lang-switch span {
+  color: var(--ink);
+  border-color: var(--ink);
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .lang-switch {
+    margin-top: 2px;
+  }
+  .site-header.is-scrolled .lang-switch {
+    margin-top: 0;
+  }
+}
