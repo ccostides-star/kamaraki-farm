@@ -93,10 +93,18 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0 0 .4em; let
 
 /* --- Mobile Responsiveness & Scroll Behaviour --- */
 @media (max-width: 768px) {
+/* Κάνουμε το header να διαχειρίζεται σωστά τα στοιχεία του κάθετα σε κινητά */
+  .site-header .wrap {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 16px;
+    gap: 8px;
+  }
   nav.main-nav ul {
     gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
-  
   nav.main-nav a {
     font-size: 0.8rem;
     padding: 4px 0;
@@ -111,6 +119,7 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0 0 .4em; let
   .site-header.is-scrolled .wrap {
     height: 50px;
     min-height: 50px;
+    flex-direction: row; /* Στο scroll επανέρχεται σε οριζόντια γραμμή επειδή κρύβεται το μενού */
   }
 
   .site-header.is-scrolled .brand {
