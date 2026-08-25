@@ -151,18 +151,23 @@
 
     if (!header || !brandLink) return;
 
-    // Παρακολούθηση κύλισης (scroll) στα κινητά
+    // Παρακολούθηση κύλισης (scroll) με hysteresis για αποφυγή του jitter
     window.addEventListener('scroll', () => {
       if (window.innerWidth <= 768) {
-        if (window.scrollY > 30) {
+        const currentScroll = window.scrollY;
+        
+        // Κλείνει όταν κατεβείς πάνω από 50px
+        if (currentScroll > 50) {
           header.classList.add('is-scrolled');
-        } else {
+        } 
+        // Ξανανοίγει μόνο όταν πλησιάσεις την κορυφή (κάτω από 10px)
+        else if (currentScroll < 10) {
           header.classList.remove('is-scrolled');
         }
       }
     });
 
-    // Tap στο λογότυπο για ομαλή επιστροφή στην κορυφή όταν η σελίδα έχει κατεβεί
+    // Tap στο λογότυπο για ομαλή επιστροφή στην κορυφή
     brandLink.addEventListener('click', (e) => {
       if (window.innerWidth <= 768 && header.classList.contains('is-scrolled')) {
         e.preventDefault();
