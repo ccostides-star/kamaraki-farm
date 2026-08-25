@@ -112,6 +112,11 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0 0 .4em; let
 /* --- Mobile Responsiveness & Scroll Behaviour --- */
 /* --- Οριστική Διόρθωση Header για Κινητά --- */
 @media (max-width: 768px) {
+  
+  /* Κανονική κατάσταση (στην κορυφή): Απαλή μετάβαση σε ό,τι αλλάζει */
+  header.site-header {
+    transition: background-color 0.3s ease;
+  }
   /* Αρχική κατάσταση: Το header γίνεται κάθετο (λογότυπο επάνω, μενού κάτω) */
   header.site-header .wrap,
   .site-header .wrap {
@@ -121,12 +126,17 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0 0 .4em; let
     min-height: auto !important;
     padding: 10px 16px !important;
     gap: 8px !important;
+    transition: padding 0.3s ease !important;
   }
 
-  /* Το μενού καταλαμβάνει όλο το πλάτος και κεντραρίρεται */
+  /* Το μενού καταλαμβάνει όλο το πλάτος και κεντραρίρεται, ομαλή μετάβαση */
   .site-header nav.main-nav {
     width: 100% !important;
     display: block !important;
+    max-height: 50px !important; /* Ξεκινάει ανοιχτό */
+    opacity: 1 !important;
+    overflow: hidden !important;
+    transition: max-height 0.3s ease, opacity 0.25s ease, margin 0.3s ease !important;
   }
 
   .site-header nav.main-nav ul {
@@ -152,6 +162,7 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0 0 .4em; let
     left: 0 !important;
     width: 100% !important;
     z-index: 1000 !important;
+    box-shadow: 0 4px 12px rgba(43,38,32,0.08); /* Προαιρετική ελαφριά σκιά για ομορφιά */
   }
 
   .site-header.is-scrolled .wrap {
@@ -163,10 +174,12 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0 0 .4em; let
     padding: 0 16px !important;
     gap: 0 !important;
   }
-
+/* Εδώ γίνεται η μαγεία: Το μενού κλείνει ύψος και γίνεται εντελώς διάφανο ταυτόχρονα */
   .site-header.is-scrolled .main-nav {
-    display: none !important;
-  }
+max-height: 0 !important;
+    opacity: 0 !important;
+    margin: 0 !important;
+    pointer-events: none !important; /* Για να μη γίνεται κλικ στα κρυμμένα links */  }
 
   .site-header.is-scrolled .brand {
     cursor: pointer !important;
