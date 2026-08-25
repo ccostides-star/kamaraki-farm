@@ -91,6 +91,28 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0 0 .4em; let
   text-transform: uppercase;
 }
 
+/* Desktop Navigation (Οριζόντιο, χωρίς κουκκίδες) */
+.site-header nav.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.site-header nav.main-nav a {
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.site-header nav.main-nav a:hover,
+.site-header nav.main-nav a[aria-current="page"] {
+  color: var(--olive);
+}
+
 /* --- Mobile Responsiveness & Scroll Behaviour --- */
 /* --- Οριστική Διόρθωση Header για Κινητά --- */
 @media (max-width: 768px) {
