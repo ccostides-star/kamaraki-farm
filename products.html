@@ -147,8 +147,10 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <span class="brand-name">Κάμαρακι <em>Farm</em></span>
-    <ul class="foot-links">
+  <span class="brand-name">
+    <em>Αγρόκτημα</em>
+    Καμαράκι
+  </span>    <ul class="foot-links">
       <li><a href="products.html">Προϊόντα</a></li>
       <li><a href="about.html">Ποιοι Είμαστε</a></li>
       <li><a href="index.html#visit">Επίσκεψη</a></li>
@@ -277,3 +279,31 @@
     });
   }
 </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('.site-header');
+      const brandLink = header ? header.querySelector('.brand') : null;
+
+      if (!header || !brandLink) return;
+
+      window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 768) {
+          if (window.scrollY > 30) {
+            header.classList.add('is-scrolled');
+          } else {
+            header.classList.remove('is-scrolled');
+          }
+        }
+      });
+
+      brandLink.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && header.classList.contains('is-scrolled')) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

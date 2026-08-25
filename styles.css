@@ -47,7 +47,7 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0 0 .4em; let
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--bg);
+  background-color: var(--stone);
   transition: all 0.3s ease;
 }
 
@@ -116,6 +116,21 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0 0 .4em; let
   .site-header.is-scrolled .brand {
     cursor: pointer;
   }
+}
+
+/* --- Footer Brand (1 γραμμή) --- */
+footer.site-footer .brand-name {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  font-size: 1rem;
+}
+
+footer.site-footer .brand-name em {
+  font-size: inherit;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 /* ---------- hero ---------- */
