@@ -239,7 +239,6 @@ section.alt{ background:var(--stone-card); border-top:1px solid var(--line); bor
 .story-grid.reverse > *{ direction:ltr; }
 
 .stat-row{ display:flex; gap:32px; margin-top:24px; flex-wrap:wrap; }
-.stat{ }
 .stat .num{ font-family:var(--font-display); font-size:2rem; color:var(--olive-dark); line-height:1; }
 .stat .label{ font-family:var(--font-mono); font-size:.72rem; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.05em; }
 
