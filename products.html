@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Προϊόντα — Κάμαρακι Farm</title>
+<meta name="description" content="Διαθέσιμα τώρα: φρέσκα οπωρολαχανικά, γλυκά του κουταλιού, μαρμελάδες και chutney από το Κάμαρακι Farm στο Μεντούλη Κύμης, Εύβοια.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#545F3B"/><path d="M10 46 C10 30 20 20 32 20 C44 20 54 30 54 46" fill="none" stroke="#F8F3E7" stroke-width="5" stroke-linecap="round"/><rect x="8" y="46" width="48" height="6" rx="2" fill="#F8F3E7"/></svg>
+      <span class="brand-name">Κάμαρακι <em>Farm</em></span>
+    </a>
+    <nav class="main-nav" aria-label="Κύριο μενού">
+      <ul>
+        <li><a href="index.html">Αρχική</a></li>
+        <li><a href="products.html" aria-current="page">Προϊόντα</a></li>
+        <li><a href="about.html">Ποιοι Είμαστε</a></li>
+        <li><a href="index.html#visit">Επίσκεψη</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:12px;">
+    <div class="wrap" style="grid-template-columns:1fr;">
+      <div>
+        <span class="eyebrow">Διαθέσιμα Τώρα</span>
+        <h1 style="font-size:clamp(2rem,4vw,2.8rem);">Τα προϊόντα της φάρμας</h1>
+        <p class="lede">Η λίστα ανανεώνεται όσο αλλάζει η σοδειά. Οι τιμές παρακάτω είναι ενδεικτικές — αντικαταστήστε τες με τις δικές σας.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:12px;">
+    <div class="wrap">
+      <div class="cat-grid">
+
+        <div class="cat-card">
+          <div class="ph wide" data-label="ΦΩΤΟ: Οπωρολαχανικά εποχής"></div>
+          <div class="cat-body">
+            <span class="eyebrow">Οπωρολαχανικά</span>
+            <h3>Λαχανικά &amp; Φρούτα Εποχής</h3>
+            <ul class="product-list">
+              <li><span class="pname">Ντομάτες<span class="pnote">κιλό</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Ντομάτες (κιλό)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Ντομάτα βελανίδι μαύρο Prune noire<span class="pnote">κιλό</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Ντομάτα βελανίδι μαύρο Prune noire (κιλό)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Ντοματίνι πορτοκαλί Peardrops<span class="pnote">κιλό</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Ντοματίνι πορτοκαλί Peardrops (κιλό)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Πιπεριά Yolo Wonder<span class="pnote">κιλό</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Πιπεριά Yolo Wonder (κιλό)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Πιπεριά Φλωρίνης<span class="pnote">κιλό</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Πιπεριά Φλωρίνης (κιλό)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Μελιτζάνα φλάσκα<span class="pnote">κιλό</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Μελιτζάνα φλάσκα (κιλό)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Μελιτζάνα μακρυά Long Purple<span class="pnote">κιλό</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Μελιτζάνα μακρυά Long Purple (κιλό)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Πατάτες<span class="pnote">κιλό</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Πατάτες (κιλό)')">Διαθεσιμότητα</button></li>
+            </ul>
+            <div class="badge-row"><span class="badge">Εποχικά</span><span class="badge">100% παραδοσιακές ποικιλίες</span><span class="badge">Μαζεύονται κατόπιν παραγγελίας</span></div>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="ph wide" data-label="ΦΩΤΟ: Γλυκά κουταλιού σε βάζα"></div>
+          <div class="cat-body">
+            <span class="eyebrow">Ζαχαροπλαστείο</span>
+            <h3>Γλυκά του Κουταλιού</h3>
+            <ul class="product-list">
+              <li><span class="pname">Σταφύλι μαύρο<span class="pnote">βάζο 500γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Σταφύλι μαύρο')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Σταφύλι λευκό<span class="pnote">βάζο 500γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Σταφύλι λευκό')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Φράουλα<span class="pnote">βάζο 500γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Φράουλα')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Κεράσι<span class="pnote">βάζο 500γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Κεράσι')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Βύσσινο<span class="pnote">βάζο 500γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Βύσσινο')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Λεμόνι φράπα<span class="pnote">βάζο 500γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Λεμόνι φράπα')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Πορτοκάλι<span class="pnote">βάζο 500γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Πορτοκάλι')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Καρπούζι<span class="pnote">βάζο 500γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Καρπούζι')">Διαθεσιμότητα</button></li>
+            </ul>
+            <div class="badge-row"><span class="badge">Χειροποίητο</span><span class="badge">Περιορισμένη παραγωγή</span></div>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="ph wide" data-label="ΦΩΤΟ: Μαρμελάδες"></div>
+          <div class="cat-body">
+            <span class="eyebrow">Ζαχαροπλαστείο</span>
+            <h3>Μαρμελάδες</h3>
+            <ul class="product-list">
+              <li><span class="pname">Σύκο Κύμης<span class="pnote">βάζο 500γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Σύκο Κύμης')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Πορτοκάλι<span class="pnote">βάζο 500γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Πορτοκάλι')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Βερύκοκο<span class="pnote">βάζο 500γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Βερύκοκο')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Ροδάκινο<span class="pnote">βάζο 500γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Ροδάκινο')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Μήλο & Αχλάδι<span class="pnote">βάζο 500γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Μήλο & Αχλάδι')">Διαθεσιμότητα</button></li>
+            </ul>
+            <div class="badge-row"><span class="badge">Χωρίς συντηρητικά</span><span class="badge">Περιορισμένη παραγωγή</span></div>
+          </div>
+        </div>
+
+        <div class="cat-card">
+          <div class="ph wide" data-label="ΦΩΤΟ: Chutney"></div>
+          <div class="cat-body">
+            <span class="eyebrow">Ζαχαροπλαστείο</span>
+            <h3>Chutney</h3>
+            <ul class="product-list">
+              <li><span class="pname">Πορτοκαλί & κόκκινα τοματίνια<span class="pnote">βάζο 250γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Πορτοκαλί & κόκκινα τοματίνια (chutney)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Κρεμμύδι<span class="pnote">βάζο 250γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Κρεμμύδι (chutney)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Σύκο<span class="pnote">βάζο 250γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Σύκο (chutney)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Πιπερά Jalapeno<span class="pnote">βάζο 250γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Πιπερά Jalapeno (chutney)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Ελιά<span class="pnote">βάζο 250γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Ελιά (chutney)')">Διαθεσιμότητα</button></li>
+            </ul>
+            <div class="badge-row"><span class="badge">Ιδανικό με τυριά & αλαντικά</span><span class="badge">Περιορισμένη παραγωγή</span></div>
+          </div>
+        </div>
+
+          <div class="cat-card">
+          <div class="ph wide" data-label="ΦΩΤΟ: Παντοπωλειο"></div>
+          <div class="cat-body">
+            <span class="eyebrow">Παντοπωλειο</span>
+            <h3>Διάφορες Παρασκευές</h3>
+            <ul class="product-list">
+              <li><span class="pname">Ελαιόλαδο, ντόπια παραδοσιακή ποικιλία<span class="pnote">1 Λίτρο</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Ελαιόλαδο (λίτρο)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Ελαιόλαδο με καυτερή πιπεριά Καγιεν<span class="pnote">βάζο 200mL</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Ελαιόλαδο με καυτερή πιπεριά Καγιεν (βάζο)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Πιπεριές Φλωρίνης ψημένες, σε ελαιόλαδο και ξύδι<span class="pnote">βάζο 1 κιλό</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Πιπεριές Φλωρίνης ψημένες (βάζο)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Ελιές σταφίδα σε λάδι<span class="pnote">βάζο 500γρ</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Ελιές σταφίδα σε λάδι (βάζο)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Αποξηραμμένες καυτερές πιπεριές Trinidad Moruga Scorpion<span class="pnote">τεμάχιο</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Αποξηραμμένες καυτερές πιπεριές Trinidad Moruga Scorpion (τεμ.)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Αποξηραμμένες καυτερές πιπεριές Naga Morich<span class="pnote">τεμάχιο</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Αποξηραμμένες καυτερές πιπεριές Naga Morich (τεμ.)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Αποξηραμμένες καυτερές πιπεριές Habanero <span class="pnote">τεμάχιο</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Αποξηραμμένες καυτερές πιπεριές Habanero (τεμ.)')">Διαθεσιμότητα</button></li>
+              <li><span class="pname">Αποξηραμμένες καυτερές πιπεριές Cayenne<span class="pnote">τεμάχιο</span></span><button type="button" class="price-btn" onclick="openAvailabilityModal('Αποξηραμμένες καυτερές πιπεριές Cayenne (τεμ.)')">Διαθεσιμότητα</button></li>
+            </ul>
+            <div class="badge-row"><span class="badge">Περιορισμένη παραγωγή</span><span class="badge">Με αγνά υλικά και πρώτη ύλη κατευθείαν από το αγρόκτημα</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <p style="margin-top:32px; color:var(--ink-soft); font-size:.92rem;">
+        Θέλετε μεγαλύτερη ποσότητα ή παραγγελία για εστιατόριο; <a href="index.html#visit" style="text-decoration:underline;">Επικοινωνήστε μαζί μας</a>.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="brand-name">Κάμαρακι <em>Farm</em></span>
+    <ul class="foot-links">
+      <li><a href="products.html">Προϊόντα</a></li>
+      <li><a href="about.html">Ποιοι Είμαστε</a></li>
+      <li><a href="index.html#visit">Επίσκεψη</a></li>
+    </ul>
+    <small>© 2026 Κάμαρακι Farm, Μεντούλη Κύμης, Εύβοια</small>
+  </div>
+</footer>
+
+<!-- Modal Popup Επικοινωνίας -->
+<dialog id="availabilityModal" class="availability-modal">
+  <form method="dialog" style="position:relative;" id="availabilityForm">
+    <button type="button" class="modal-close" onclick="closeModal()">✕</button>
+
+<!-- Web3Forms Access Key (Βάλε εδώ το κλειδί σου) -->
+    <input type="hidden" name="access_key" value="6e248eff-0a82-4f13-a08e-a9cc30222505">
+    <input type="hidden" name="subject" id="emailSubject" value="Νέο αίτημα διαθεσιμότητας προϊόντος">
+    
+    <!-- Κοντέινερ Φόρμας -->
+    <div id="formContent">
+      <span class="eyebrow">Φόρμα Επικοινωνίας</span>
+      <h3 id="modalProductTitle" style="margin-top:4px; font-size:1.3rem;">Διαθεσιμότητα προϊόντος</h3>
+      <p style="font-size:0.9rem; color:var(--ink-soft); margin-bottom:20px;">Συμπληρώστε το κινητό σας και επιλέξτε πώς προτιμάτε να σας απαντήσουμε.</p>
+      
+      <input type="hidden" id="hiddenProductName" name="product">
+      
+      <div class="modal-form-group">
+        <label for="phone">Αριθμός Κινητού</label>
+        <input type="tel" id="phone" name="phone" placeholder="π.χ. 69XXXXXXXX" required>
+      </div>
+
+      <div class="modal-form-group">
+        <label>Τρόπος επικοινωνίας</label>
+        <div class="radio-group">
+          <label><input type="radio" name="contact_method" value="Viber" checked> Viber</label>
+          <label><input type="radio" name="contact_method" value="WhatsApp"> WhatsApp</label>
+          <label><input type="radio" name="contact_method" value="SMS"> Γραπτό SMS</label>
+        </div>
+      </div>
+
+      <div style="margin-top:24px; display:flex; justify-content:flex-end; gap:10px;">
+        <button type="button" class="btn btn-ghost" style="padding:10px 16px;" onclick="closeModal()">Άκυρο</button>
+        <button type="button" class="btn btn-primary" style="padding:10px 20px;" onclick="submitInquiry()">Αποστολή αιτήματος</button>
+      </div>
+    </div>
+
+    <!-- Κοντέινερ Επιτυχίας -->
+    <div id="successContent" style="display:none; text-align:center; padding: 10px 0 20px;">
+      <span class="eyebrow" style="color: var(--olive);">Επιτυχία</span>
+      <h3 style="margin-top:8px; font-size:1.3rem;">Το αίτημά σας καταγράφηκε!</h3>
+      <p id="successMessageText" style="font-size:0.95rem; color:var(--ink-soft); margin: 16px 0 28px; line-height: 1.5;"></p>
+      <button type="button" class="btn btn-primary" style="padding:10px 24px; width:100%;" onclick="closeModal()">Κλείσιμο</button>
+    </div>
+
+  </form>
+</dialog>
+
+<script>
+  const modal = document.getElementById('availabilityModal');
+  const titleEl = document.getElementById('modalProductTitle');
+  const hiddenInput = document.getElementById('hiddenProductName');
+  const formContent = document.getElementById('formContent');
+  const successContent = document.getElementById('successContent');
+  const successMessageText = document.getElementById('successMessageText');
+
+  function openAvailabilityModal(productName) {
+    titleEl.textContent = productName;
+    hiddenInput.value = productName;
+    
+    formContent.style.display = 'block';
+    successContent.style.display = 'none';
+    document.getElementById('phone').value = '';
+    
+    modal.showModal();
+  }
+
+  function closeModal() {
+    modal.close();
+  }
+
+  function submitInquiry() {
+    const phone = document.getElementById('phone').value;
+    const method = document.querySelector('input[name="contact_method"]:checked').value;
+    const product = hiddenInput.value;
+    
+    if(!phone || phone.length < 6) {
+      alert('Παρακαλώ συμπληρώστε έναν έγκυρο αριθμό κινητού.');
+      return;
+    }
+
+    const formElement = document.getElementById('availabilityForm');
+    const formData = new FormData(formElement);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const submitBtn = event.target;
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Αποστολή...';
+    submitBtn.disabled = true;
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: json
+    })
+    .then(async (response) => {
+      let resJson = await response.json();
+      if (response.status == 200) {
+        successMessageText.innerHTML = `Θα επικοινωνήσουμε μαζί σας για το προϊόν<br><strong style="color:var(--ink);">${product}</strong><br>μέσω <strong>${method}</strong> στο <strong>${phone}</strong>.`;
+        
+        formContent.style.display = 'none';
+        successContent.style.display = 'block';
+      } else {
+        alert(resJson.message || 'Κάτι πήγε στραβά. Δοκιμάστε ξανά.');
+      }
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    })
+    .catch(error => {
+      console.log(error);
+      alert('Σφάλμα σύνδεσης. Ελέγξτε το internet σας.');
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    });
+  }
+</script>
