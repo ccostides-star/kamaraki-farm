@@ -98,8 +98,8 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0 0 .4em; let
 
 .brand-name .brand-tagline {
   font-family: var(--font-body);
-  font-size: 0.72rem;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 600;
   text-transform: lowercase;
   letter-spacing: 0.02em;
   vertical-align: middle;
