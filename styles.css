@@ -460,3 +460,12 @@ dialog.availability-modal::backdrop {
   object-fit: contain;
   background-color: var(--stone-card);
 }
+
+/* Styling για τον ενσωματωμένο χάρτη Google Maps */
+.map-frame {
+  width: 100%;
+  min-height: 320px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 12px rgba(43, 38, 32, 0.04);
+}
