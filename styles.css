@@ -457,6 +457,6 @@ dialog.availability-modal::backdrop {
 .cat-card img {
   width: 100%;
   height: 220px;
-  object-fit: cover;
+  object-fit: contain;
   background-color: var(--stone-card);
 }
